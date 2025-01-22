@@ -5,9 +5,9 @@ const outputEl = document.getElementById('outputUl');
 const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 // / faccio partire la richiesta Ajax verso l'API per ricevere il numero
 axios.get(endpoint)
-    .then(response => {
+    .then(responseObj => {
         //codice da eseguire in caso di successo
-        const result = response.data;
+        const result = responseObj.data;
         let mail = result.response;
         
         console.log(mail);
